@@ -12,7 +12,7 @@ AFRAME.registerComponent('markers_start',{
       markersURLArray.push(url);
       markersNameArray.push('Marker_'+i);
     }
-    for(var k=0; k<18; k++)
+    for(var k=0; k<7; k++)
     {
       var markerEl = document.createElement('a-marker');
       markerEl.setAttribute('type','pattern');
@@ -33,15 +33,15 @@ AFRAME.registerComponent('markers_start',{
 });
 
 AFRAME.registerComponent('registerevents', {
-  init: function () {
-    const marker = this.el;
-    marker.addEventListener("markerFound", ()=> {
-      var markerId = marker.id;
-      console.log('Marker Found: ', markerId);
-    });
-    marker.addEventListener("markerLost",() =>{
-      var markerId = marker.id;
-      console.log('Marker Lost: ', markerId);
-    });
-  },
-});
+    init: function () {
+      const marker = this.el;
+      marker.addEventListener("markerFound", ()=> {
+        var markerId = marker.id;
+        console.log('Marker Found: ', markerId);
+      });
+      marker.addEventListener("markerLost",() =>{
+        var markerId = marker.id;
+        console.log('Marker Lost: ', markerId);
+      });
+    },
+  });
