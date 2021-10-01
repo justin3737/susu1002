@@ -8,7 +8,7 @@ AFRAME.registerComponent('markers_start',{
     //lists of the markers
     for(var i=1; i<7; i++)
     {
-      var url="res/markers/pattern-qr-code_"+i+".patt";
+      var url="res/markers/pattern-pattern-Individual_Blocks-"+i+".patt";
       markersURLArray.push(url);
       markersNameArray.push('Marker_'+i);
     }
